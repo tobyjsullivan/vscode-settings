@@ -17,7 +17,7 @@
   // it trivial to manually format comments.
   "editor.rulers": [120],
 
-  // Keep files in sync when rapidly syncing between editor and hot-reload, ofter forgetting to save.
+  // Keep files in sync when rapidly switching between editor and hot-reload, ofter forgetting to save.
   // The delay prevents auto-format from applying while I type.
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 5000,
@@ -31,7 +31,7 @@
   // Avoid those ugly missing newline notations on PRs. Also helps legibility when `cat`-ing files on the command line.
   "files.insertFinalNewline": true,
 
-  // I don't nest deeply often but, when I do, I prefer to keep everything on the screen.
+  // I don't deeply nest often but, when I do, I prefer to keep everything on the screen.
   "editor.tabSize": 2,
 
   // Format as we go. (prettier)
@@ -52,7 +52,7 @@
     "typescriptreact"
   ],
 
-  // Yarn
+  // Adalo uses yarn
   "eslint.packageManager": "yarn",
 
   /************************************
@@ -64,10 +64,10 @@
   // A high-contrast theme reduces effort to read code quickly and in smaller fonts. My eyes are not young anymore.
   "workbench.colorTheme": "Default High Contrast",
 
-  // VS Code's new layout is a little tighter. No significant preference though.
+  // VS Code's new layout is a little tighter. No significant preference either way.
   "window.commandCenter": true,
 
-  // Hide Welcome screen on startup
+  // Hide the Welcome screen on startup
   "workbench.startupEditor": "none",
 
   // Disable distracting and unhelpful prompts.
