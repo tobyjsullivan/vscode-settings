@@ -5,22 +5,27 @@
    *                              *
    ********************************/
 
-  // Limit the number of open tabs (generally prefer between 2-5).
-  // This is a tool to eliminate "tab overload" during complex tracing sessions. You know that experience where you lose
-  // code that was just open in a sea of tabs? This tactic helps in two ways. Most obviously, it prevents ever landing
-  // in a sea of open tabs. Less obviously, and more critically, it forces a mode of working where I must remain
-  // conciously aware of what files I'm navigating between. This forces me to remain oriented at all times.
-  "workbench.editor.limit.enabled": true,
-  "workbench.editor.limit.value": 5,
-
-  // Adalo code uses 120-character line limits. Prettier, however, does not auto-format comments. Drawing a ruler makes
+  // Adalo code limits lines to 120 characters. Prettier, however, does not auto-format comments. Drawing a ruler makes
   // it trivial to manually format comments.
   "editor.rulers": [120],
 
-  // Keep files in sync when rapidly switching between editor and hot-reload, ofter forgetting to save.
-  // The delay prevents auto-format from applying while I type.
+  // Keep files in sync when rapidly switching between editor and hot-reload, often forgetting to save. The delay
+  // prevents auto-formatting while I type.
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 5000,
+
+  // Limit the number of open tabs.
+  //
+  // This mitigates the pain of "tab overload" during complex tracing sessions. You know that experience where you need
+  // the code that was just on your screen just 30 seconds ago and now you're frantically searching through a sea of
+  // open tabs hoping if you hit Ctrl+Tab enough times it'll just show up but it's not omg where is it I just had it
+  // here a minute ago where did it go? Sssshhhh **just breath** It'll be okay. We've all been there.
+  //
+  // This tactic helps in two ways. Most obviously, it prevents creating a sea of open tabs. Less obviously, and more
+  // critically, it forces a mode of working where I must remain aware of what files I'm navigating between - keeping me
+  // oriented at all times.
+  "workbench.editor.limit.enabled": true,
+  "workbench.editor.limit.value": 5,
 
   /********************************
    *                              *
@@ -28,7 +33,8 @@
    *                              *
    ********************************/
 
-  // Avoid those ugly missing newline notations on PRs. Also helps legibility when `cat`-ing files on the command line.
+  // Github complains when files are missing newlines. Final newlines alse help legibility when `cat`-ing files on the
+  // command line.
   "files.insertFinalNewline": true,
 
   // I don't deeply nest often but, when I do, I prefer to keep everything on the screen.
@@ -52,7 +58,7 @@
     "typescriptreact"
   ],
 
-  // Adalo uses yarn
+  // Adalo uses Yarn.
   "eslint.packageManager": "yarn",
 
   /************************************
@@ -67,7 +73,7 @@
   // VS Code's new layout is a little tighter. No significant preference either way.
   "window.commandCenter": true,
 
-  // Hide the Welcome screen on startup
+  // Hide the Welcome screen on startup.
   "workbench.startupEditor": "none",
 
   // Disable distracting and unhelpful prompts.
