@@ -1,0 +1,78 @@
+{
+  /********************************
+   *                              *
+   *      Editor Experience       *
+   *                              *
+   ********************************/
+
+  // Limit the number of open tabs (generally prefer between 2-5).
+  // This is a tool to eliminate "tab overload" during complex tracing sessions. You know that experience where you lose
+  // code that was just open in a sea of tabs? This tactic helps in two ways. Most obviously, it prevents ever landing
+  // in a sea of open tabs. Less obviously, and more critically, it forces a mode of working where I must remain
+  // conciously aware of what files I'm navigating between. This forces me to remain oriented at all times.
+  "workbench.editor.limit.enabled": true,
+  "workbench.editor.limit.value": 5,
+
+  // Adalo code uses 120-character line limits. Prettier, however, does not auto-format comments. Drawing a ruler makes
+  // it trivial to manually format comments.
+  "editor.rulers": [120],
+
+  // Keep files in sync when rapidly syncing between editor and hot-reload, ofter forgetting to save.
+  // The delay prevents auto-format from applying while I type.
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 5000,
+
+  /********************************
+   *                              *
+   *    Code style and tooling    *
+   *                              *
+   ********************************/
+
+  // Avoid those ugly missing newline notations on PRs. Also helps legibility when `cat`-ing files on the command line.
+  "files.insertFinalNewline": true,
+
+  // I don't nest deeply often but, when I do, I prefer to keep everything on the screen.
+  "editor.tabSize": 2,
+
+  // Format as we go. (prettier)
+  "prettier.enable": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // Lint as we go. (eslint)
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.codeActionsOnSave.mode": "problems",
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+
+  // Yarn
+  "eslint.packageManager": "yarn",
+
+  /************************************
+   *                                  *
+   *  VS Code Application Experience  *
+   *                                  *
+   ************************************/
+
+  // A high-contrast theme reduces effort to read code quickly and in smaller fonts. My eyes are not young anymore.
+  "workbench.colorTheme": "Default High Contrast",
+
+  // VS Code's new layout is a little tighter. No significant preference though.
+  "window.commandCenter": true,
+
+  // Hide Welcome screen on startup
+  "workbench.startupEditor": "none",
+
+  // Disable distracting and unhelpful prompts.
+  "explorer.confirmDragAndDrop": false,
+  "extensions.ignoreRecommendations": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always"
+}
