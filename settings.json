@@ -5,14 +5,14 @@
    *                              *
    ********************************/
 
-  // Adalo code limits lines to 120 characters. Prettier, however, does not auto-format comments. Drawing a ruler makes
-  // it trivial to manually format comments.
+  // Prettier limits lines to 120 characters but does not auto-format comments. Drawing a ruler makes
+  // it trivial to manually fit comments to the preferred limit.
   "editor.rulers": [120],
 
   // Keep files in sync when rapidly switching between editor and hot-reload, often forgetting to save. The delay
   // prevents auto-formatting while I type.
   "files.autoSave": "afterDelay",
-  "files.autoSaveDelay": 5000,
+  "files.autoSaveDelay": 2000,
 
   // Limit the number of open tabs.
   //
@@ -58,7 +58,7 @@
     "typescriptreact"
   ],
 
-  // Adalo uses Yarn.
+  // Use Yarn.
   "eslint.packageManager": "yarn",
 
   /************************************
